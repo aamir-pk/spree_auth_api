@@ -14,6 +14,16 @@ module Spree
         end
         unauthorized unless @user.valid_password?(params[:password])
       end
+      
+      def reset_password
+        @user = User.find_by_email(params[:email])
+        if @user.present?
+          @user.send_reset_password_instructions
+          render :text => "done"
+        else
+          render :text => "no such email"
+        end      
+      end
 
     end
   end
