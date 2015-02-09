@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_auth_api'
-  s.version     = '1.0.3'
+  s.version     = '1.0.4'
   s.summary     = 'Sign in API'
   s.description = 'Sign in API'
   s.required_ruby_version = '>= 1.9.3'
